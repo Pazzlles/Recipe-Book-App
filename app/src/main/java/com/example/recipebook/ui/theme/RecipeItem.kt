@@ -7,6 +7,7 @@ import androidx.compose.material3.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.recipebook.model.Recipe
+import com.example.recipebook.model.toReadable
 
 @Composable
 fun RecipeItem(recipe: Recipe, onClick: () -> Unit) {
@@ -21,7 +22,7 @@ fun RecipeItem(recipe: Recipe, onClick: () -> Unit) {
 
             Text(recipe.title)
             Text("${recipe.category} • ${recipe.time} min • ${recipe.difficulty}")
-            Text("State: ${recipe.state}")
+            Text("State: ${recipe.state.toReadable()}")
         }
     }
 }
