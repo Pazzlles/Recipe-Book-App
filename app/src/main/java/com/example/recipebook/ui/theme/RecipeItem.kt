@@ -22,7 +22,7 @@ fun RecipeItem(recipe: Recipe, onClick: () -> Unit) {
 
             Text(recipe.title)
             Text("${recipe.category} • ${recipe.time} min • ${recipe.difficulty}")
-            Text("State: ${recipe.state.toReadable()}")
+            Text("Статус: ${recipe.state.toReadable()}")
         }
     }
 }
